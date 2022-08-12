@@ -24,7 +24,7 @@ System.debug(myBlob);
 string myString;
 System.debug(myString);
 
-string firstName = 'Gokmen';
+string firstName = 'Kenny';
 System.debug (firstName);
 
 Date currentDate = Date.today();
