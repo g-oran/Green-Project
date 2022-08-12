@@ -1,5 +1,6 @@
-import { LightningElement } from 'lwc';
-export default class Example04 extends LightningElement {
+
+import { LightningElement } from "lwc";
+export default class example04 extends LightningElement {
    users = ["John", "Mary", "Susan"];
    num1 = 5;
    num2 = 3;
