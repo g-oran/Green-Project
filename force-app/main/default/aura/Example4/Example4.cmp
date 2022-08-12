@@ -1,0 +1,6 @@
+<aura:component implements = "flexipage:availableForAllPageTypes"  access="global">
+    <aura:attribute name="buttonLabel" type="String"/>
+    <lightning:button aura:id="button1" label="Button 1"/>
+    <lightning:button label="Get Lable" onclick="{!c.myAction}"/>
+    {!v.buttonLabel}
+</aura:component>
