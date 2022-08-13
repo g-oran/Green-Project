@@ -1,0 +1,13 @@
+<template> 
+    <lightning-card title="Teamwork"> 
+      <lightning-input class="slds-m-around_medium" label="First Name: " type="text" 
+  value={firstName} 
+        onkeyup={changeHandlerFirstName}> 
+      </lightning-input> 
+      <lightning-input class="slds-m-around_medium" label="Last Name: " type="text" 
+  value={lastName} 
+        onkeyup={changeHandlerLastName}></lightning-input> 
+      <lightning-button class="slds-m-around_medium" label="Click" 
+  onclick={clickHandler}></lightning-button> 
+    </lightning-card> 
+  </template>

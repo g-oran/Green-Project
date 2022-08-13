@@ -1,0 +1,36 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <lightning-card title="Quiz App In LWC">
+        <form class="slds-m-around_medium">
+            <template for:each={myQuestions} for:item="quiz">
+                <div key={quiz.id} class="slds-m-around_medium">
+                    <div>
+                        <strong>{quiz.id} - {quiz.question}</strong>
+                    </div>
+                        <div class="slds-m-around_medium">
+                            <div>
+                                <input type="radio" name={quiz.id} value="a" onchange={changeHandler}/> 
+                                <span class="slds-maround_medium">{quiz.answers.a}</span>
+                            </div>
+                            <div>
+                                <input type="radio" name={quiz.id} value="b" onchange={changeHandler}/>
+                                <span class="slds-maround_medium">{quiz.answers.b}</span>
+                            </div>
+                            <div>
+                                <input type="radio" name={quiz.id} value="c" onchange={changeHandler}/>
+                                <span class="slds-maround_medium">{quiz.answers.c}</span>
+                            </div>
+                    </div>
+                </div>
+            </template>
+            <lightning-button class="slds-m-around_medium" variant="brand" type="submit" label="Submit" title="Submit Quiz" disabled={allNotSelected} onclick={submitHandler}></lightning-button>
+            <lightning-button class="slds-m-around_medium" variant="brand" type="reset" label="Reset" title="Reset Quiz" onclick={resetHandler}></lightning-button>
+        </form>
+        <template if:true={isSubmitted}>
+            <div class="slds-m-around_medium">
+                <p style="color:red">You have Scored {correctAnswers} out of {myQuestions.length}</p>
+            </div>
+
+        </template>
+    </lightning-card>
+</template>

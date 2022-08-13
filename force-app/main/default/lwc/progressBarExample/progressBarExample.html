@@ -1,0 +1,27 @@
+<template>
+    <form class="slds-m-around_medium">
+        <lightning-card title="Progress Bar Example">
+            <div class="slds-m-around_medium">
+                <span>Track Progress: </span>
+                <span>{progress}% Complete</span>
+            </div>
+            <lightning-progress-bar class="slds-m-around_medium" value={progress} size="large"></lightning-progress-bar>
+
+
+            <lightning-input class="slds-m-around_medium" name="firstName" label="First Name" value={firstName} onchange={handleChange} type="text"></lightning-input>
+
+            <lightning-input class="slds-m-around_medium" name="lastName" label="Last Name" value={lastName} onchange={handleChange} type="text"></lightning-input>
+
+            <lightning-input class="slds-m-around_medium" name="birthDate" label="Birth Date" value={birthDate} onchange={handleChange} type="date"></lightning-input>
+
+            <lightning-input class="slds-m-around_medium" name="emailAddress" label="Email Address" value={emailAddress} onchange={handleChange} type="email"></lightning-input>
+
+            <lightning-input class="slds-m-around_medium" name="mobile" label="Mobile" value={mobile} onchange={handleChange} type="mobile"></lightning-input>
+
+
+            <lightning-button class="slds-m-around_medium" label="Reset" onclick={handleReset}></lightning-button>
+
+            <lightning-button class="slds-m-around_medium" label="Submit" onclick={handleSubmit}></lightning-button>
+        </lightning-card>
+    </form>
+</template>

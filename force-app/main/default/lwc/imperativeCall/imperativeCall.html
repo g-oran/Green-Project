@@ -1,0 +1,17 @@
+<template>
+
+    <lightning-button label="Show Accounts" onclick={clickHandleShow}></lightning-button>
+
+    <lightning-button label="Hide Accounts" onclick={clickHandleHide}></lightning-button>
+
+    <lightning-card title="Accounts">
+        <template if:true={showAccounts}>
+            <template for:each={accountList} for:item="account">
+                <li key={account.Id}>
+                    {account.Id} - {account.Name} - {account.Industry}
+                </li>
+            </template>
+        </template>
+    </lightning-card>
+    
+</template>
